@@ -22,7 +22,7 @@ class ValueColumnGenerator(val ctx : Context) {
         vParams.weight = 1.0F
         vParams.bottomMargin = 3
         var value = EditText(ctx)
-        value.id = R.id.claim_title
+        value.id = R.id.claim_title_text
         value.setHint("Enter Claim Title")
         value.setTextSize(15F)
         value.setBackgroundColor(Color.WHITE)

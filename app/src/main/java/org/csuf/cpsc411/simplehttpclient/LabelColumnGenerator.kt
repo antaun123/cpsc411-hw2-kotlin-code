@@ -1,5 +1,6 @@
 package org.csuf.cpsc411.simplehttpclient
 
+
 import android.content.Context
 import android.graphics.Color
 import android.view.Gravity
@@ -37,3 +38,4 @@ class LabelColumnGenerator(val ctx : Context) {
         return layoutObj
     }
 }
+

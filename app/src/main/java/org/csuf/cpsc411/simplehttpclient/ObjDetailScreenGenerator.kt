@@ -63,7 +63,7 @@ class ObjDetailScreenGenerator(val ctx : Context) {
         val nButton = Button(ctx)
         nButton.text = "Add"
         nButton.isAllCaps = false
-        nButton.setId(R.id.add_btn)
+        nButton.setId(R.id.add_button)
         nButton.setBackgroundColor(Color.LTGRAY)
         val nbParams = LinearLayout.LayoutParams(
             ViewGroup.LayoutParams.WRAP_CONTENT,
@@ -109,3 +109,4 @@ class ObjDetailScreenGenerator(val ctx : Context) {
         return layoutObj
     }
 }
+

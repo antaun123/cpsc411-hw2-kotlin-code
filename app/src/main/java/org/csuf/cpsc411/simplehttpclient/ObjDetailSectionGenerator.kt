@@ -1,5 +1,6 @@
 package org.csuf.cpsc411.simplehttpclient
 
+
 import android.content.Context
 
 import android.view.ViewGroup
@@ -36,3 +37,4 @@ class ObjDetailSectionGenerator(val ctx : Context) {
         return layoutObj
     }
 }
+

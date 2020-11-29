@@ -29,7 +29,7 @@ open class CustomActivity : AppCompatActivity() {
                 statusView.text = "Claim ${cObj.title} failed to be created"
             }
         }
-        //Log.d("refreshScreen", "${cService.currentIndx}, ${cService.claimList.count()}")
+        Log.d("refreshScreen", "${cService.currentIndx}, ${cService.claimList.count()}")
     }
 
     fun refreshStatusTrue() {
@@ -41,21 +41,24 @@ open class CustomActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val fldRowGenerator = ObjDetailScreenGenerator(this)
-        val colView = fldRowGenerator.generate()
-        setContentView(colView)
-        //
-        val bView: Button = findViewById(R.id.add_btn)
+        //val fldRowGenerator = ObjDetailScreenGenerator(this)
+        //val colView = fldRowGenerator.generate()
+        //setContentView(colView)
+        setContentView(R.layout.main_activity)
+        val bView: Button = findViewById(R.id.add_button)
         val titleView : EditText = findViewById(R.id.claim_title)
         val dateView : EditText = findViewById(R.id.claim_date)
 
         bView.setOnClickListener {
             Log.d("Detailed Activity ", "Add button clicked!")
+
             val claimTitle : String = titleView.text.toString()
             val claimDate : String = dateView.text.toString()
             cService.claimList.add(Claim(claimTitle,claimDate))
             val cObj = cService.next()
             cService.addClaim(cObj)
+            titleView.text.clear()
+            dateView.text.clear()
             refreshScreen(cObj)
         }
         cService = ClaimService.getInstance(this)
@@ -71,7 +74,6 @@ open class CustomActivity : AppCompatActivity() {
             refreshScreen(cObj)
         }
         //cService.getAll()
-        //setContentView(R.layout.main_activity)
     }
 }
 

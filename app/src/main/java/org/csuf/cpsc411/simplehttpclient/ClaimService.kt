@@ -1,6 +1,7 @@
 package org.csuf.cpsc411.simplehttpclient
 
 import android.util.Log
+import android.widget.TextView
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.loopj.android.http.AsyncHttpClient

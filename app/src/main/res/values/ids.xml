@@ -2,6 +2,6 @@
 <resources>
     <item name="claim_title" type="id"/>
     <item name="claim_date" type="id"/>
-    <item name="add_btn" type="id"/>
+    <item name="add_button" type="id"/>
     <item name="refresh_status" type="id"/>
 </resources>
